@@ -548,7 +548,7 @@ app.post('/get_top_5_in_class', function (req, res) {
 });
 
 app.post('/get_top_5', function (req, res) {
-    User.find({ "admin": { $lt: "5" } }).sort({ "total_score": -1 }).limit(5).select('name _id level total_score class').exec(function (err, users) {
+    User.find({ "admin": { $lt: "5" } }).sort({ "score": -1 }).limit(5).exec(function (err, users) {
         if (err) {
             res.send(err);
         } else {
