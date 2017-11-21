@@ -41,7 +41,7 @@
 				<div class="clear"></div>
 
 
-z						<h2>
+				<h2 ng-show="{{user.admin}}">
 							<a ui-sref="reading" style="font-size: -webkit-xxx-large;font-weight: 600;" class="btn btn-primary btn-lg btn-white">Start Today's Reading? <span class="glyphicon glyphicon-book"></span></a>
 						</h2>
 				</div>
@@ -87,7 +87,7 @@ z						<h2>
 									<th>{{$index+1}}</th>
 							        <th>{{kid.name}}</th>
 							        <th>{{kid.score}}</th>
-											<th>{{kid.rank}}</th>
+									<th>{{kid.rank}}</th>
 							      </tr>
 							      
 							    </tbody>
