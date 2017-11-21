@@ -13,7 +13,7 @@ angular.module('yapp')
     if($location.absUrl().includes("localhost")){
       $window.localStorage.setItem("base_url","http://localhost:5000");
     }else{
-      $window.localStorage.setItem("base_url","https://dbr.herokuapp.com");
+      $window.localStorage.setItem("base_url","https://ststeven.herokuapp.com");
     }
     
     if(localStorage.getItem("user")!= undefined){
