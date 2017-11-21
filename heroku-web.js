@@ -13,7 +13,7 @@ app.use(cors());
 console.log("app started");
 
 var mongoose = require('mongoose');
-var DB_URI = "mongodb://admin:admin@ds147964.mlab.com:47964/dbr";
+var DB_URI = "mongodb://MinaNemr:125879@ds161455.mlab.com:61455/steven";
 var bodyParser = require('body-parser');
 // app.use(express.static('../public'))
 // var Router = express.Router();

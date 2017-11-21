@@ -4,31 +4,44 @@ var Schema = mongoose.Schema({
     name:{type:String},
     username:{type:String},
     password:{type:String},
-    class:{type:String},
-    level:{type:Number ,default:1},
-    total_score:{type:Number, default: 0},
-    level_score:{type:Number, default: 0},
-    admin:{type:Number, default: 0},
+    rank:{type:String ,default:"Bronze"},
+    score:{type:Number, default: 100},
+    admin:{type:Boolean, default: false},
     birthday:{type:Date},
-    reading_dates:[],
-    row_readings_count:{type:Number, default: 0},
-    row_correct_answer_count:{type:Number, default: 0},
-    answered_questions:[
+    address:{type:String},
+    contacts:[
       {
-        question_id:{type:String},
-        reading_id:{type:String},
-        is_right_answer: {type:Boolean},
-        user_answer:{type:String},
-        right_answer:{type:String},
-        question:{type:String},
-        choices:[{type:String}],
-        score:{type:String},
-        date:{type:Date}
+        personal:{type:Number},
+        mother:{type:Number},
+        father:{type:Number},
+        home:{type:Number},
+         
       }
     ],
-    trophies:[{
-      trophy:{ type : mongoose.Schema.Types.ObjectId, ref: 'trophy' },
-      date:{type:Date}
+    confessions:[
+      {
+        month:{type:Number},
+        confessed:{type:Number, default: 0}
+      }
+    ],
+    holy_masses:[
+      {
+        week:{type:Number},
+        attended:{type:Number, default: 0}
+      }
+    ],
+    classes:[
+      {
+        week:{type:Number},
+        attended:{type:Number, default: 0},
+        score:{type:Number}   
+      }
+    ],
+    gifts:[
+      {
+        name:{type:String},
+        picture:{type:String, default:"NA" }
+           
       }
     ]
 })

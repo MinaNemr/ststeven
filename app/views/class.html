@@ -1,0 +1,37 @@
+<div>
+	<div ng-include="'menu.html'"></div>
+	<!-- <snap-dragger></snap-dragger> -->
+	<snap-content snap-opt-tap-to-close="false">
+
+		<h2 style="text-align: center;">Class Of {{class.date | date:'yyyy-MM-dd'}}</h2>
+		<div class="container">
+		 	<div style="float: right; width: 20%;">
+		 		<div class="row">
+		 		  <div ng-repeat="kid in class.absent_kids" class="col-sm-3">
+		 		  	<button style="background-color: red" ng-click="enter_attendance(kid)"> {{kid.name}}</button>
+		 		  </div>
+		 		</div>
+		 	</div>
+		 	<div style="float: left; width: 80%;">
+		 		<div class="row">
+		 		  <div ng-repeat="kid in class.attended_kids" class="col-sm-3">
+		 		  	<a href="" ng-click="add_score(kid,50)">
+		 		  		<img ng-src="images/kids/{{kid.username}}.jpg">
+		 		  		<h2>{{kid.name}}</h2>
+		 		  	</a>
+		 		  </div>
+		 		</div>
+		 	</div>
+		</div>
+	</snap-content>
+</div>
+
+<style>
+	.submit-btn{
+		font-size: 54px;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    margin-top: 20px;
+	}
+</style>

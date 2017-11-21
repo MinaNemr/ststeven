@@ -19,11 +19,11 @@
 				<div class="row">
 					<center>
 						<h2 style="font-weight: 700;">
-							Score: {{user.total_score}} Points
+							Score: {{user.score}} Points
 						</h2>
 					</center>
 				</div>
-				<div class="row">
+				<div ng-show="{{user.admin}}" class="row">
 					<div class="col-md-2 pull-left">
 						<h1 style="text-align:center">
 							<small>Level</small><br> {{user.level}}
@@ -114,44 +114,23 @@
 							    </tbody>
 							</table>
 						</div>
-						<div class="col-md-6">
-							<h3>My Class Top 5</h3>
-							<table class="table">
-							    <thead>
-							      <tr>
-									<th>Rank</th>
-							        <th>Name</th>
-							        <th>Score</th>
-									<th>Level</th>
-							      </tr>
-							    </thead>
-							    <tbody>
-							      <tr ng-repeat="kid in topKidsInClass track by $index">
-									<th>{{$index+1}}</th>
-							        <th>{{kid.name}}</th>
-							        <th>{{kid.total_score}}</th>
-											<th>{{kid.level}}</th>
-							      </tr>
-							      
-							    </tbody>
-							</table>
-						</div>
+					
 					
 				</div>
 
 				<!-- bottom buttons -->
 				<center>
-				<div class="row text-center" style="padding-top:20px;display: -webkit-inline-box;">
-							<div class="text-center pd"  ng-if="user.admin != undefined && user.admin >=10">
+				<div class="row text-center" style="padding-top:20px;display: -webkit-inline-box;" ng-show="user.admin">
+							<div class="text-center pd" >
 									<a ui-sref="adminStats" class="btn btn-primary btn-lg btn-white ">Admin Statistics</a>
 							</div>
-							<div class="text-center pd"  ng-if="user.admin != undefined && user.admin >=10">
+							<div class="text-center pd"  >
 									<a ui-sref="readingManager" class="btn btn-primary btn-lg btn-white ">Reading Manager</a>
 							</div>
-							<div class="text-center pd"  ng-if="user.admin != undefined && user.admin >=5" >
+							<div class="text-center pd"  >
 								<a ui-sref="view_kids" class="btn btn-primary btn-lg btn-white">My boys</a>
 							</div>
-							<div class="text-center pd"  ng-if="user.admin != undefined && user.admin >=5">
+							<div class="text-center pd"  >
 								<p>
 									<a ui-sref="add_kids" class="btn btn-primary btn-lg btn-white ">Add Kids</a>
 								</p>

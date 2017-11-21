@@ -16,6 +16,7 @@ var states = [
         { name: 'reports',cache: false, state: { url: '/reports', parent: 'dashboard', templateUrl: 'views/dashboard/reports.html', data: {text: "Reports", visible: true } } },
         { name: 'logout',cache: false, state: { url: '/login', data: {text: "Logout", visible: true }} },
         { name: 'home',cache: false, state: { url: '/home',templateUrl: 'views/home.html', controller: 'HomeCtrl', parent: 'dashboard'}},
+        { name: 'class',cache: false, state: { url: '/class',templateUrl: 'views/class.html', controller: 'ClassCtrl', parent: 'dashboard'}},
         { name: 'reading',cache: false, state: { url: '/reading',templateUrl: 'views/reading.html', controller: 'readingCtrl', parent: 'dashboard'}},
         { name: 'add_reading',cache: false, state: { url: '/add_reading',templateUrl: 'views/add_reading.html', controller: 'AddReadingCtrl', parent: 'dashboard'}},
         { name: 'add_kids',cache: false, state: { url: '/add_kids',templateUrl: 'views/add_kids.html', controller: 'AddKidsCtrl', parent: 'dashboard'}},
